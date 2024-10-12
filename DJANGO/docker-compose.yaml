@@ -1,0 +1,10 @@
+services:
+  web:
+    build: .
+    # command: python manage.py runserver 0.0.0.0:8000 # For developement.
+    command: gunicorn --bind 0.0.0.0:8000 DJANGO.wsgi:application
+    volumes:
+      - .:/app
+      - ./db:/app/db  # This will persist the SQLite database
+    ports:
+      - "8000:8000"
