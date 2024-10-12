@@ -138,25 +138,25 @@ AUTH_USER_MODEL = "APP.MyUser"     # Add User Model Here.
 
 # # ------------------- MEDIA AND STATIC FILES STARTS -----------------
 # import os
-# STATIC_URL = '/static/'
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, 'static'),
-# ]
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/')
-
-# MEDIA_ROOT = os.path.join(BASE_DIR, "Media")
-# MEDIA_URL = "/Media/"
-# Static files (CSS, JavaScript, Images)
-
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    BASE_DIR / 'static',
+    os.path.join(BASE_DIR, 'static'),
 ]
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/')
 
-# Media files
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_URL = "/media/"
+# Static files (CSS, JavaScript, Images)
+
+# STATIC_URL = '/static/'
+# STATICFILES_DIRS = [
+#     BASE_DIR / 'static',
+# ]
+# STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# # Media files
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = BASE_DIR / 'media'
 
 # # ------------------- MEDIA AND STATIC FILES ENDS --------------------
 

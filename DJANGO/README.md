@@ -19,3 +19,6 @@ docker run -p 8000:8000 django_img
 ============================================================
 docker-compose up
 docker-compose up --build
+============================================================
+docker-compose exec web python manage.py migrate
+docker-compose exec web python manage.py createsuperuser
