@@ -222,7 +222,7 @@ def student_delete(request, id):
     student = Student.objects.get(id=id)
     student.delete()
     messages.success(request, "Student record has been deleted successfully")
-    return redirect('dashboard')
+    return redirect('user_dashboard')
 
 def send_email_attachment(request):
     if request.method == 'POST':
